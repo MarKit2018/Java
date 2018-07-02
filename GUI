@@ -1,0 +1,9 @@
+/*如何为表格添加一个滚动条？*/
+
+private JScrollPane jScrollPane;//声明滚动条
+private JTable jTable;//声明一个表格
+private DefaultTableModel defaultTableModel;//声明一个自定义表格模型
+
+defaultTableModel = new DefaultTableModel(28, 8);//创建28行，8列的表格模型
+jTable = new JTable(defaultTableModel);//把表格模型放进JTable表格里面
+jScrollPane = new JScrollPane(jTable);//把表格放进滚动面板里面，如果表格超出面板大小，会自动添加滚动条
